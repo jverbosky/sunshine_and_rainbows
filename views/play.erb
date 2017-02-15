@@ -1,0 +1,54 @@
+<!--
+/views/play.erb
+- called by "post '/guess' do" in app.rb when game is in progress
+- provides form for entering letter and feedback on letter
+ -->
+
+<!--
+# Original manual entry method
+<div class="row">
+  <p>Please enter a letter:</p>
+  <form method="post" action="guess">  # action ~ "post '/guess' do" in app.rb
+    <input type="text" name="letter">  # text == string, name ~ "@num = params[:letter]" in app.rb
+    <input type="submit" value="Enter">  # button to submit letter to "post '/guess' do" route for evaluation
+  </form>
+</div>
+ -->
+
+<div class="padding">
+  <p>Please select a letter:</p>
+  <form method="post" action="guess">  <!-- action ~ "post '/guess' do" in app.rb -->
+    <select type="text" name="letter">  <!-- text == string, name ~ "@num = params[:letter]" in app.rb -->
+      <option value="a">a</option>
+      <option value="b">b</option>
+      <option value="c">c</option>
+      <option value="d">d</option>
+      <option value="e">e</option>
+      <option value="f">f</option>
+      <option value="g">g</option>
+      <option value="h">h</option>
+      <option value="i">i</option>
+      <option value="j">j</option>
+      <option value="k">k</option>
+      <option value="l">l</option>
+      <option value="m">m</option>
+      <option value="n">n</option>
+      <option value="o">o</option>
+      <option value="p">p</option>
+      <option value="q">q</option>
+      <option value="r">r</option>
+      <option value="s">s</option>
+      <option value="t">t</option>
+      <option value="u">u</option>
+      <option value="v">v</option>
+      <option value="w">w</option>
+      <option value="x">x</option>
+      <option value="y">y</option>
+      <option value="z">z</option>
+    </select>
+    <input type="submit" value="Submit">  <!-- button to submit letter to "post '/guess' do" route for evaluation -->
+  </form>
+</div>
+<div class="padding">
+  <p><br><%= @feedback %></p>  <!-- indicates if letter is invalid, incorrect or correct -->
+</div>

@@ -1,0 +1,11 @@
+<!--
+/views/play.erb
+- called by "post '/guess' do" in app.rb when game is over
+- provides button for restarting game via "post '/new' do"
+ -->
+
+<div class="row">
+  <form method="post" action="new">  <!-- action ~ "post '/new' do" in app.rb -->
+      <input type="submit" value="Play Again" />  <!-- button to use "post '/new' do" route -->
+  </form>
+</div>

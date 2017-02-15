@@ -1,0 +1,55 @@
+<!--
+/views/layout.erb
+- used to host common content for views
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sunshine & Rainbows</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">  <!-- added to get scaled view on mobile -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/favicon.ico?" type="image/x-icon">  <!-- added to get favicon to load -->
+  </head>
+  <body>
+  <header>
+    <h1><a href="https://www.linkedin.com/in/johnverbosky" target="_blank">Sunshine & Rainbows</a></h1>  <!-- use target="_blank" to open link in new tab/page -->
+  </header>
+  <section>
+    <div class="container-fluid">
+      <div class="center-block padding">
+        <div class="row">
+          <p>
+            Score<br>
+            -----<br>
+            Won: <%= @won %>&nbsp;&nbsp;&nbsp;&nbsp;Lost: <%= @lost %><br>  <!-- use %nbsp; to force spaces -->
+          </p>
+        </div>
+      </div>
+      <div class="image">
+        <div class="img-responsive center-block">
+          <div>
+            <img src=<%= @image %> alt="Whoops - image failed to load...">
+          </div>
+        </div>
+      </div>
+      <div class="center-block padding">
+        <div class="row">
+          <p>Word: <%= @current %></p>
+          <p>Letters: <%= @guessed %></p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <%= yield %>  <!-- load unique content from other .erb files -->
+    </div>
+<!--     <div>
+      <div class="copyright">
+        <p>Written and coded by <a href="https://www.linkedin.com/in/johnverbosky">John C. Verbosky</a>.</p>
+      </div>
+    </div> -->
+  </section>
+  </body>
+</html>

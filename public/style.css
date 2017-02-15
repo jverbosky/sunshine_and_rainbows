@@ -1,0 +1,61 @@
+/*
+/public/styles.css
+- CSS styles for Hangman app
+*/
+
+body {
+  background-color: #ffffff;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #9DC3E6;
+}
+
+div {
+  display: table;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+    color: #9DC3E6;
+}
+
+form {
+  margin-left: 25%;
+  color: #000000;
+}
+
+input {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.padding {
+  padding-top: 10px;
+}
+
+.image {
+  height: 163px;
+  width:  325px;
+}
+
+/* Use these two classes to position copyright bottom/middle of the page*/
+/* Note - doesn't work well on mobile, research more later */
+
+/*.center {
+  text-align: center;
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}*/
