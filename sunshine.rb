@@ -94,7 +94,7 @@ end
 # Used by @test in "post '/guess' do" route in app.rb
 def good_letter(letter)
   if $bucket.include? letter  # check to see if letter has already been guessed and reprompt if so
-    $prompt = "Sorry, but you already guessed that one. Please try again!"
+    $prompt = "Sorry, sunshine - you already guessed that one!"
   elsif letter[/[a-zA-Z]+/] and letter.length == 1  # check is a single -letter- has been entered
     $bucket.push(letter)  # if so, add it to the bucket array
     letter_test(letter)  # then pass it to letter_test()
@@ -137,7 +137,7 @@ def word_test()
     $game_won = true  # set the flag to indicate that the player won the game
     $games_won += 1  # so increase the games_won score by 1
   else  # if they don't match, run user_input() for another letter
-    $prompt = "Good job - that letter was in the word. Please guess again!"
+    $prompt = "Great job, sunshine - please guess again!"
   end
 end
 
@@ -145,7 +145,7 @@ end
 def wrong_letter(letter)
   if $wrong_count.length < 9  # if the wrong_count array has less than 9 letters
     $wrong_count.push(letter)  # then add the letter to the array
-    $prompt = "Sorry - that letter was not in the word. Please try again!"
+    $prompt = "Sorry, sunshine - that letter isn't in the word!"
   else  # if this is the tenth wrong letter, it's game over
     $wrong_count.push(letter)  # then add the letter to the array
     $game_over = true  # set the flag to indicate that the game is over
