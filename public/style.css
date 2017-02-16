@@ -6,7 +6,7 @@
 body {
   background-color: #ffffff;
   font-family: sans-serif;
-  font-size: 12pt;
+  font-size: 13pt;
   color: #9DC3E6;
 }
 
@@ -25,12 +25,13 @@ a {
 }
 
 form {
-  margin-left: 5%;
+  margin-left: 17%;
   color: #000000;
 }
 
 input {
   font-family: sans-serif;
+  font-size: 11pt;
 }
 
 .center-block {
